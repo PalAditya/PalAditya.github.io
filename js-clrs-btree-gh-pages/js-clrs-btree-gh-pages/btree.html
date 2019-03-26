@@ -46,7 +46,7 @@ function get(name){
    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
       return decodeURIComponent(name[1]);
 }
-fucntion hello()
+function hello()
 {
 document.getElementById('simple').innerHTML=get("structure");
 document.getElementById('simplem').value=get("level");
