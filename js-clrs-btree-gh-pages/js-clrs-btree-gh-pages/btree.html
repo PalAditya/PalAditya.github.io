@@ -41,6 +41,13 @@ Show intermediate states of the tree: <input type="checkbox" id="drawCheckBox" c
 <button onclick="draw()">Draw</button>
 -->
 <div style="float:right">
+<script>
+function get(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+}
+alert(get("val"));
+</script>
 <p><button onclick="init('simple','simplem')">Init simple</button><button onclick="init('empty','simplem')">Init empty with this M</button><input type="hidden" id="empty" value='{"keys":[]}'></input>
 <br><label>M: <input id="simplem" value="2"></label><br>
 <textarea id="simple" cols="60" rows="5">
