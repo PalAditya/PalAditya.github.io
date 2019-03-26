@@ -39,7 +39,6 @@ function hello()
 document.getElementById('simple').innerHTML=get("structure");
 document.getElementById('simplem').value=get("level");
 document.getElementById('one').click();
-$('div:not(#svgelem)').hide();
 },3000);
 </script>
 <p><button id="one" onclick="init('simple','simplem')">Init simple</button><button onclick="init('empty','simplem')">Init empty with this M</button><input type="hidden" id="empty" value='{"keys":[]}'></input>
