@@ -46,11 +46,16 @@ function get(name){
    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
       return decodeURIComponent(name[1]);
 }
-alert(get("val"));
+fucntion hello()
+{
+document.getElementById('simple').innerHTML=get("structure");
+document.getElementById('simplem').value=get("level");
+document.getElementById('one').click();
+}
 </script>
-<p><button onclick="init('simple','simplem')">Init simple</button><button onclick="init('empty','simplem')">Init empty with this M</button><input type="hidden" id="empty" value='{"keys":[]}'></input>
+<p><button id="one" onclick="init('simple','simplem')">Init simple</button><button onclick="init('empty','simplem')">Init empty with this M</button><input type="hidden" id="empty" value='{"keys":[]}'></input>
 <br><label>M: <input id="simplem" value="2"></label><br>
-<textarea id="simple" cols="60" rows="5">
+<textarea id="simple" cols="60" rows="5" onLoad="hello()">
 {"keys": [10,20,30],
  "children": [{"keys": [1,2]}, {"keys": [11,12]}, {"keys": [21,22]}, {"keys": [31,32]}]
 }
